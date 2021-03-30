@@ -3,23 +3,26 @@
     <!--    <img alt="Vue logo" src="./assets/logo.png">-->
     <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <Header></Header>
-    <section class="container">
+    <main class="container">
       <router-view/>
-    </section>
+    </main>
+    <footer>
+<!--      <Declaration></Declaration>-->
+    </footer>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-
+import './assets/reset.css';
 import Header from "@/components/Header";
+// import Declaration from "@/components/declaration"
 
 export default {
   name: 'App',
   components: {Header},
-  // components: {
-  //   HelloWorld
-  // }
+  created() {
+
+  }
 }
 </script>
 
@@ -34,9 +37,11 @@ export default {
 /*}*/
 
 :root {
-  --text-color: #f0f4f5;
-  --background-color: #263343;
-  --accent-color: #d49466;
+  --text-color: #000000;
+  --text-hover: #448aff;
+  --background-color: #F5F5F6;
+  --accent-color: #006db3;
+  --item-background-color: #E1E2E1;
 }
 
 body {
@@ -44,7 +49,9 @@ body {
   font-family: 'Source Code Pro';
   width: 100vw;
   height: 100vh;
-  background-color: #42b983;
+  background-color: var(--background-color);
+  padding-top: 50px;
+  overscroll-behavior-y: none;
 }
 
 a {
@@ -52,12 +59,13 @@ a {
   color: var(--text-color);
 }
 
-.container{
-  position: absolute;
+.container {
+  /*background-color: #d49466;*/
 
-  background-color: #d49466;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 </style>

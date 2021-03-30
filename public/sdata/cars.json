@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "number": "23구5938",
+    "memo": "102동 앞 경비실 쪽",
+    "photo": "",
+    "regDate": "202103010950",
+    "isChecked": false,
+    "checkedDate": "202103011050"
+  },
+  {
+    "id": "2",
+    "number": "23구5938",
+    "memo": "102동 앞 경비실 쪽",
+    "photo": "",
+    "regDate": "202103010950",
+    "isChecked": false,
+    "checkedDate": "202103011050"
+  },
+  {
+    "id": "3",
+    "number": "23구5938",
+    "memo": "102동 앞 경비실 쪽",
+    "photo": "",
+    "regDate": "202103010950",
+    "isChecked": false,
+    "checkedDate": "202103011050"
+  }
+]

@@ -34,6 +34,16 @@ const routes = [
             title: 'list',
         },
     },
+    // 신고하
+    {
+        path: '/Report',
+        name: 'report',
+        alias: '/report',
+        component: () => import('@/views/Report.vue'),
+        meta: {
+            title: 'report',
+        },
+    },
 ]
 
 const router = new VueRouter({
@@ -41,5 +51,13 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes,
 });
+
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function(location) {
+    // console.log(this)
+    return originalPush.call(this, location).catch(err => {
+        if (err.name !== 'NavigationDuplicated') throw err;
+    });
+};
 
 export default router;
